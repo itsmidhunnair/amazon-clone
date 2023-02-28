@@ -58,6 +58,10 @@ function hideFilter() {
 let cartCount=0;
 
 function cartCnt(){
+    if (cartCount == 25) {
+        cartCount=0;
+    }
 cartCount++;
 document.querySelector(".cartCount").innerHTML=cartCount;
+document.getElementById("cartCount").innerHTML=cartCount;
 }
