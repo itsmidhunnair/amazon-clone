@@ -1,0 +1,14 @@
+.ProductPage-body
+{
+    position: relative;
+    top: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    margin-bottom: 60px;
+}
+
+.main-Img
+{
+    width: 50%;
+}

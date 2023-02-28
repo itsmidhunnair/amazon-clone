@@ -1,0 +1,136 @@
+@media only screen and (max-width: 1246px){
+    .headbar,.navBar{
+        display: none !important;
+    }
+
+    .mobileNav{
+        width: 100%;
+        background-color: #131A22;
+        height: 100px;
+        padding-top: 10px;
+        position: fixed;
+        z-index: 2;
+    }
+    
+    .mobileNav .topPart{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobileNav .topPart .topLeft{
+        display: flex;
+        align-items: center;
+    }
+    .mobileNav .topPart .topRight{
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+    }
+
+    .mobileNav .topPart .topRight .signInLink a{
+        text-decoration: none;
+        color: white;
+        padding-right: 10px;
+    }
+
+    .carousel-main{
+        position: relative;
+        top: 100px;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        position: absolute;
+        top: 60px;
+    }
+
+    .body-content{
+        top: 0px;
+    }
+
+    
+    .card-container .m-card{
+        width: 92vw;
+    }
+    
+    .menuBar .menuCloseBtn{
+        left: auto;
+        right: 17px;
+    }
+    
+    .hlogo img{
+        width: 120px;
+        padding-left: 10px;
+    }
+    
+    .bottomPart .searchbox{
+        width: 100%;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .bottomPart .searchbox #seachBox{
+        width: 75%;
+    }
+    
+    .prevBtn,.nextBtn{
+        display: none;
+    }
+    
+    footer{
+        width: 100%;
+    }
+
+    footer .PrimSubDiv{
+        flex-wrap: wrap;
+        margin: 0 10px;
+        justify-content: center;
+    }
+
+    .PrimSubDiv Div{
+        margin-left: 0;
+      }
+
+    footer .country{
+        flex-wrap:wrap;
+        font-size: 6px;
+    }
+
+    .footerPrim li:first-child{
+        font-size: 12px;
+      }
+      
+      .footerPrim li{
+        font-size: 8px; 
+      }
+
+      .footerSecond .secSubDiv{
+        width: 90%;
+      }
+
+      .footerSecond .subFooContent{
+        padding-top:15px;
+        padding-bottom: 15px;
+      }
+      
+      .subFooContent div{
+        margin-left: 0;
+      }
+
+      .footerSecond ul:first-child{
+        padding-left: 0;
+      }
+
+      .subFooContent div{
+        padding-left: 15px;
+      }
+
+      .footerSecond li:first-child{
+        font-size: 8px;
+      }
+
+      
+      .footerSecond li{
+        font-size: 8px;
+      }
+}

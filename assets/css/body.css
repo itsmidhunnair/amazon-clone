@@ -1,0 +1,269 @@
+.body-content {
+  position: relative;
+  top: 60px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  bottom: 310px;
+  color: #000 !important;
+}
+
+.carousel-control-prev-icon{
+  filter: hue-rotate(10px);
+}
+
+.allExceptCarou {
+  position: absolute;
+  width: 100%;
+  top: 241px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 14%, rgba(251,251,251,1) 36%, rgba(228,228,228,1) 100%);
+}
+
+.nextBtn button {
+  background-color: #fff;
+  border: none;
+}
+
+.prevBtn button {
+  background-color: #fff;
+  border: none;
+}
+
+.prevBtn {
+    position: absolute;
+    z-index: 1;
+    height: 110px;
+    background-color: #fff;
+}
+.nextBtn {
+    position: absolute;
+    right: 0;
+  z-index: 1;
+  height: 110px;
+  background-color: #fff;
+}
+
+
+/* CARD CONTAINER (MAIN FULL WIDTH CARD) */
+.card-container {
+  width: 100%;
+  padding: 20px;
+  background-color: white !important;
+  -webkit-box-shadow: 10px 10px 32px -15px rgba(0,0,0,0.45) !important;
+  -moz-box-shadow: 10px 10px 32px -15px rgba(0,0,0,0.45) !important;
+  box-shadow: 10px 10px 32px -15px rgba(0,0,0,0.45) !important;
+  height: 330px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.card-container .m-card {
+  width: 96vw;
+}
+.card-container .m-card .m-card-header {
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.card-container .m-card h5 {
+  margin: 0;
+}
+.card-container .m-card span a {
+  font-size: 13px;
+  color: #007185;
+  text-decoration: none;
+}
+
+.m-card .m-card-header {
+  display: flex;
+  align-items: center;
+}
+.m-card .m-card-content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 5px 0;
+  overflow-x: scroll;
+  width: 98%;
+  height: 270px;
+  scroll-behavior: smooth;
+}
+
+.m-card .m-card-content::-webkit-scrollbar{
+  display: none;
+}
+
+/* INNER CARD (SINGLE CARD) */
+
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.inner-card .inner-card-img {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  position: relative;
+  object-fit: contain;
+}
+.inner-card .inner-card-img img {
+  margin: auto;
+  max-height: 184px;
+  max-width: 224px;
+}
+
+.inner-card .inner-card-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-card-footer .discount {
+  display: inline;
+  margin: auto;
+}
+.inner-card-footer .discount .discount-per {
+  background-color: #cc0c39;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px;
+}
+.inner-card-footer .discount .discount-tag {
+  color: #cc0c39;
+  font-size: 11px;
+  padding: 5px;
+  font-weight: 500;
+}
+.inner-card-footer .desc {
+  font-size: 12px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.signInBottom{
+  position: relative;
+  width: 100vw;
+  margin-top: 25px;
+  background-color: #ffffff;
+}
+
+.signInBottom .allExceptLines{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.signInBottom .signinBtn{
+  background-color: #FEBD69;
+  border: none;
+  width: 192px;
+  border-radius: 3px;
+}
+
+.backToTop{
+  background-color: #37475a;
+  width: 100vw;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+footer{
+  background-color: #232f3e;
+}
+
+footer hr{
+  color: #fff;
+}
+
+.footerPrim{
+  display: flex;
+  justify-content: center;
+}
+
+.footerPrim ul{
+  list-style: none;
+  color: #fff ;
+}
+
+.footerPrim li:first-child{
+  font-weight: bold;
+  font-size: 16px;
+  color: #eeeeee;
+}
+
+.footerPrim li{
+  font-size: 12px;
+  margin-top: 10px;
+  color: #c4c4c4;
+}
+
+.PrimSubDiv Div{
+  margin-left: 100px;
+}
+
+.PrimSubDiv Div:first-child{
+  margin-left: 0;
+}
+
+footer .country{
+  display: flex;
+  justify-content: center;
+  color: #b7b4b4;
+  font-size: 12px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+footer .country div{
+  margin-left: 10px;
+}
+
+
+.footerSecond .secSubDiv{
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.footerSecond .subFooContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.subFooContent div{
+  margin-left: 50px;
+}
+
+.footerSecond ul{
+  list-style: none;
+  color: #fff ;
+}
+
+.footerSecond li:first-child{
+  font-size: 10px;
+  color: #eeeeee;
+}
+
+.footerSecond li{
+  font-size: 10px;
+  color: #c4c4c4;
+}

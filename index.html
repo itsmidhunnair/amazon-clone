@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Amazon Lite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+    body{
+      overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="headbar">
+            <div class="hlogo"><img src="assets/img/amazon.png" alt=""></div>
+            <div class="homeLoc" style="display: flex; align-items: center;">
+                <div class="Icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg></div>
+                  <div>
+                    <span class="smgreet">Hello</span>
+                      <div><span class="subText">Select your Address</span></div>
+                  </div>
+            </div>
+            <div class="searchbox" style="display: flex;">
+                <div class="filterDD" onfocusout="hideFilter()">
+                    <button onclick="showFilter()">All <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                      </svg></span></button>
+                      <div class="filterDropDown">
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                            <a>All Categories</a>
+                            <a>Alexa Skills</a>
+                      </div>
+                </div>
+                <input type="text" placeholder="Search Amazon.in" id="seachBox">
+                <div class="searchIcon">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></button>
+                </div>
+            </div>
+            <div class="homeLoc" style="display: flex; align-items: center;">
+                <div class="Icon"><img style="width: 25px;" src="assets/img/Flag_of_India.png" alt=""></div>
+                  <div>
+                      <div><span class="subText" style="top: 0;">EN<span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                      </svg></span></span></div>
+                  </div>
+
+                </div>
+                <div id="signin" onmouseenter="showSigninDropDown()" onmouseleave="hideSigninDropDown()">
+                  <span class="smgreet">Hello, sign in</span>
+                    <div><span class="subText">Accounts & Lists<span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg></span></span></div>
+                    <div class="account-DropDown" id="account-DropDown">
+                        <div class="signinSec">
+                            <div style="display: flex;justify-content: center;margin: 20px 0;">
+                                <button class="signinBtn">Sign In</button>
+                            </div>
+                            <div style="text-align: center;font-size: 12px;">New Customer? <a href="#">Sign in here</a> </div>
+                            <hr>
+                            <div class="dropDown2ndPart">
+                                <div class="leftPart">
+                                    <ul>
+                                        <li>Your List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                        <li>Create a Wish List</li>
+                                    </ul>
+                                </div>
+                                <div class="leftPart" style="border-left: 0.5px solid rgb(206, 206, 206);">
+                                    <ul>
+                                    <li>Your List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                    <li>Create a Wish List</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                  <span class="smgreet">Returns</span>
+                    <div><span class="subText">& Orders</span></div>
+                </div>
+                <div style="display: flex;align-items: center;" onclick="cartCnt()">
+                    <span class="cartCount">0</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <div>
+                      <span class="smgreet">&nbsp;</span>
+                        <div><span class="subText">Cart</span></div>
+                    </div>
+                </div>
+        </div>
+        <div class="navBar" style="display: flex;">
+            <div class="Nav2leftPart" style="display: flex;align-items: center; width: 70%;">
+                <div class="navItems" style="margin-left: 15px;">
+                    <a href="javascript:void(0)" onclick="openMenu()">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                          </svg>
+                        </span>
+                        <span style="font-weight: bold;">
+                            All
+                        </span>
+                    </a>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Sell
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Amazon miniTV
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Best Sellers
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Mobiles
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Customer Service
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Today's Deals
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Electronics
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Prime<span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg></span>
+                    </span>
+                </div>
+                <div class="navItems">
+                    <span>
+                        Amazon Pay
+                    </span>
+                </div>
+            </div>
+            <div class="Nav2RightPart">
+                <img src="https://m.media-amazon.com/images/G/31/IN-hq/2021/img/Mobile_Traffic_/XCM_Manual_1321458_1651511_IN_3781247_400x39_en_IN._CB655944656_.jpg" alt="">
+            </div>
+        </div>
+
+
+        <div class="mobileNav">
+          <div class="topPart">
+            <div class="topLeft">
+              <div class="navItems" style="margin-left: 15px;">
+                <a href="javascript:void(0)" onclick="openMenu()">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="hlogo"><img src="assets/img/amazon.png" alt=""></div>
+            </div>
+          <div class="topRight">
+            <div class="signInLink">
+              <a href="#">
+                Sign In
+              </a>
+            </div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="#fff" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+              </svg>
+          </div>
+            <div style="display: flex;align-items: center;" onclick="cartCnt()">
+              <span class="cartCount">0</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="#fff" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+          </div>
+          </div>
+          </div>
+
+          <div class="bottomPart">
+            <div class="searchbox" style="display: flex;">
+              <div class="filterDD" onfocusout="hideFilter()">
+                  <button onclick="showFilter(event)">All <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg></span></button>
+                    <div class="filterDropDown" id="mobFilterDropDown">
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                          <a>All Categories</a>
+                          <a>Alexa Skills</a>
+                    </div>
+              </div>
+              <input type="text" placeholder="Search Amazon.in" id="seachBox">
+              <div class="searchIcon">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg></button>
+              </div>
+          </div>
+          </div>
+
+        </div>
+
+
+        <div class="menuBar">
+            <div class="menuCloseBtn"><button onclick="closeMenu()">X</button></div>
+            <div class="menuHead">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#fff" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg>
+                </span>
+                <span class="greet">Hello, sign in</span>
+            </div>
+            <div class="menuContent">
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>Trending</li>
+                    <li>Best Sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="overlay"></div>
+
+        <div class="body-content">
+            <div class="carousel-main">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="assets/img/carousel-images/61-MMbp+W4L._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/610NTFOyhAL._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/619rl+QqjwL._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/61x-Ik4m6pL._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/71guEvd5dCL._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/71LbHsact9L._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/81cP1IAxf-L._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/61aURrton0L._SX3000_.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/carousel-images/61GnAucagBL._SX3000_.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            
+            <div class="allExceptCarou">
+                <section class="outer-div position-relative d-flex justify-content-center flex-wrap" style="width:98%">
+                    <!-- TODAY's DEAL -->
+                    <div class="card-container d-flex shadow-sm">
+                        <div class="m-card">
+                            <div class="m-card-header">
+                                <h5>Today's Deal</h5>
+                                <span><a href="#">See all deals</a></span>
+                            </div>
+                            <div class="m-card-content">
+                            <div class="prevBtn"><button onclick="scrollPrev(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                              </svg></button></div>
+                            <div class="nextBtn"><button onclick="scrollNext(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                              </svg></button></div>
+                              <a href="productPage.html" style="text-decoration: none; color: rgb(58, 58, 58);">
+                                <div class="inner-card">
+                                    <div class="inner-card-img">
+                                        <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                                    </div>
+                                    <div class="inner-card-footer">
+                                        <div class="discount">
+                                            <span class="discount-per">Up to 50% off</span>
+                                            <span class="discount-tag">Deal of the day</span>
+                                        </div>
+                                        <div class="desc">Best Offers on ptron</div>
+                                    </div>
+                                </div>
+                            </a>
+                          <a href="productPage.html" style="text-decoration: none; color: rgb(58, 58, 58);">
+                              <div class="inner-card">
+                                <div class="inner-card-img">
+                                  <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                                </div>
+                                <div class="inner-card-footer">
+                                  <div class="discount">
+                                    <span class="discount-per">Up to 50% off</span>
+                                    <span class="discount-tag">Deal of the day</span>
+                                  </div>
+                                  <div class="desc">Best Offers on ptron</div>
+                                </div>
+                              </div>
+                          </a>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TODAY's DEAL -->
+                    <div class="card-container d-flex shadow-sm">
+                        <div class="m-card">
+                            <div class="m-card-header">
+                                <h5>Today's Deal</h5>
+                                <span><a href="#">See all deals</a></span>
+                            </div>
+                            <div class="m-card-content">
+                            <div class="prevBtn"><button onclick="scrollPrev(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                              </svg></button></div>
+                            <div class="nextBtn"><button onclick="scrollNext(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                              </svg></button></div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TODAY's DEAL -->
+                    <div class="card-container d-flex shadow-sm">
+                        <div class="m-card">
+                            <div class="m-card-header">
+                                <h5>Today's Deal</h5>
+                                <span><a href="#">See all deals</a></span>
+                            </div>
+                            <div class="m-card-content">
+                            <div class="prevBtn"><button onclick="scrollPrev(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                              </svg></button></div>
+                            <div class="nextBtn"><button onclick="scrollNext(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                              </svg></button></div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TODAY's DEAL -->
+                    <div class="card-container d-flex shadow-sm">
+                        <div class="m-card">
+                            <div class="m-card-header">
+                                <h5>Today's Deal</h5>
+                                <span><a href="#">See all deals</a></span>
+                            </div>
+                            <div class="m-card-content">
+                            <div class="prevBtn"><button onclick="scrollPrev(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                              </svg></button></div>
+                            <div class="nextBtn"><button onclick="scrollNext(event)" style="height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                              </svg></button></div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                          <div class="inner-card">
+                            <div class="inner-card-img">
+                              <img src="assets/img/card images/31fyRvIvx6L._AC_SY200_.jpg" alt="" />
+                            </div>
+                            <div class="inner-card-footer">
+                              <div class="discount">
+                                <span class="discount-per">Up to 50% off</span>
+                                <span class="discount-tag">Deal of the day</span>
+                              </div>
+                              <div class="desc">Best Offers on ptron</div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                <div>
+                </div>
+                <div class="signInBottom">
+                    <hr>
+                    <div class="allExceptLines">
+                        <div style="font-size: 13px; margin-bottom:10px">
+                            See personalized recomendation
+                        </div>
+                        <div>
+                            <button class="signinBtn">Sign In</button>
+                        </div>
+                        <div style="font-size: 13px; margin-top:10px">
+                            New Customer? <a href="#" style="text-decoration: none;">Start here</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="backToTop">
+                    <a href="#main" style="text-decoration:none;color:#fff">Back to Top</a>
+                </div>
+                <footer>
+                    <div class="footerPrim">
+                        <div class="PrimSubDiv" style="display: flex;">
+                            <div>
+                                <ul>
+                                    <li>Trending</li>
+                                    <li>Best Sellers</li>
+                                    <li>New Releases</li>
+                                    <li>Movers and Shakers</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>Trending</li>
+                                    <li>Best Sellers</li>
+                                    <li>New Releases</li>
+                                    <li>Movers and Shakers</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>Trending</li>
+                                    <li>Best Sellers</li>
+                                    <li>New Releases</li>
+                                    <li>Movers and Shakers</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>Trending</li>
+                                    <li>Best Sellers</li>
+                                    <li>New Releases</li>
+                                    <li>Movers and Shakers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="display:flex; justify-content: center;margin-bottom: 10px;">
+                            <div class="hlogo"><img src="assets/img/amazon.png" alt=""></div>
+                            <div style="margin-left: 40px;"><button style="background-color:transparent; border: 1px solid #fff; color: #fff;width: 62px;height: 22px;font-size: 11px;">English</button></div>
+
+                    </div>
+                    <div class="country">
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                        <div>Country</div>
+                    </div>
+
+                    <div class="footerSecond" style="background-color: #131A22; width: 100vw;">
+                        <div class="secSubDiv">
+                            <div class="subFooContent">
+                                <div>
+                                     <ul>
+                                         <li>Trending</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                     </ul>
+                                </div>                                
+                                <div>
+                                     <ul>
+                                         <li>Trending</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                     </ul>
+                                </div>                                
+                                <div>
+                                     <ul>
+                                         <li>Trending</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                     </ul>
+                                </div>                                
+                                <div>
+                                     <ul>
+                                         <li>Trending</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                     </ul>
+                                </div>                                
+                                <div>
+                                     <ul>
+                                         <li>Trending</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                         <li>Best Sellers</li>
+                                     </ul>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
